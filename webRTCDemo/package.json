@@ -1,0 +1,22 @@
+{
+    "name": "webRTCDemo",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "Win-PC",
+    "contributors": [],
+    "dependencies": {
+        "ejs": "^2.6.2",
+        "express": "*"
+    },
+    "devDependencies": {
+        "jquery": "^3.4.1",
+        "simple-peer": "^9.4.0",
+        "webpack": "^4.35.0"
+    }
+}
