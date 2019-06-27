@@ -4,6 +4,22 @@
  * and open the template in the editor.
  */
 const openStream = require('./openStream');
-openStream();
+const $ = require('jquery');
+
+//openStream;
+
+const Peer = require('simple-peer');
+
+const p = new Peer({ initiator: location.hash === '#1', tricke: false });
+
+p.on('signal', token => {   
+    $('#txtMySignal').val(JSON.stringify(token));
+});
+
+$('#btnConnect').click(() => {
+    const frSignal = JSON.parse($('#txtFrSignal').val());
+    p.signal(frSignal);
+});
+
 console.log('Xin chao');
 

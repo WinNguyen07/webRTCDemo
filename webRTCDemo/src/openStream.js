@@ -6,13 +6,7 @@
 
 function openStream(){
     navigator.mediaDevices.getUserMedia({ audio: false, video: true })
-    .then(stream => {
-        const video = document.getElementById('myStream');
-        video.srcObject = stream;
-        video.onloadedmetadata = function() {
-          video.play();
-        };
-    })
+    .then(stream => playVideo(stream, 'myStream'))
     .catch(err => console.log(err)); 
 };
 
